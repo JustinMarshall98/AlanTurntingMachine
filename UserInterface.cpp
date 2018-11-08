@@ -1,5 +1,10 @@
 //#include "UserInterface.h"
-#include "menu.cpp"
+#include "Menu.cpp"
+#include "DrinkFactory.cpp"
+#include "SYS.cpp"
+#include "YOLO.cpp"
+#include "Drink.cpp"
+//#include "Liquid.cpp"
 #include <vector>
 #include <unistd.h>
 #include <iostream>
@@ -32,7 +37,7 @@ void runMenu(DrinkFactory factory){
 }
 
 void runGames(DrinkFactory factory){
-    GamesOptions temp = new GamesOptions(factory);
+    //GamesOptions temp = new GamesOptions(factory);
     bool loop = true;
     while(loop){
         char option;
@@ -41,14 +46,12 @@ void runGames(DrinkFactory factory){
         cout << endl;
         switch (option) {
         case '1': { 
-            vector<Game> games = temp.getGameOptions();
-            temp.setChoice(games[0]); //Assumes getters and setters
-            temp.playGame(temp.getChoice());//
+            SYS temp = new SYS(factory.getDrinks());
+            temp.randomDrink();
             break; }
         case '2': { 
-            vector<Game> games = temp.getGameOptions();
-            temp.setChoice(games[1]); //Assumes getters and setters
-            temp.playGame(temp.getChoice());
+            YOLO temp = new YOLO(factory.getDrinks());
+            temp.randomDrink();
             break; }
         case '3': { 
             loop = false;

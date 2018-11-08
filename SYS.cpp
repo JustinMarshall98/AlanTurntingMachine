@@ -32,7 +32,7 @@ returns nothing
 returns a drink IRL
 */
 
-void YOLO::randomDrink(){
+void SYS::randomDrink(){
 
     int drinkchoice = rand() % 6 + 1;
     if(drinkchoice == 6){
