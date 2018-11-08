@@ -1,0 +1,9 @@
+Vodka:Coke
+Vodka:Sprite
+Vodka:Soda
+Tequila:Coke
+Tequila:Sprite
+Tequila:Soda
+Rum:Coke
+Rum:Sprite
+Rum:Soda
