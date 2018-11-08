@@ -17,7 +17,11 @@ vector<string> getLiquids(){
 }
 
 void Drink::Pour(){
-    Liquid::Pour(this);
+    cout << "Pouring Drink: " << name << endl;
+    cout << "With Ingredients: "  << name << endl;
+    for(int i = 0; i < ingredients.size(); i++){
+        ingredients[i].Pour();
+    }
 }
 
 void Drink::add(string ingredient){
