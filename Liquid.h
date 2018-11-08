@@ -17,7 +17,7 @@ public:
     std::string getType();
     void setType(std::string s);
     void setAmount(float t);
-    void pour(std::string drinkType);
+    void pour(Drink d);
 
 private:
     float amount;
