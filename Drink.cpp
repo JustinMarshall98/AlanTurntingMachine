@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Drink::Drink(string d, vector<string> tempIngredients){
+Drink::Drink(string d, vector<Liquid> tempIngredients){
     name = d;
     ingredients = tempIngredients;
 }
@@ -22,7 +22,7 @@ Drink::Pour(){
 
 Drink::add(string ingredient){
     
-    isPresent = (std::find(ingredients.begin(), ingredients.end(), ingredient) != ingredients.end());
+    isPresent = (find(ingredients.begin(), ingredients.end(), ingredient) != ingredients.end());
     if(isPresent){
         cout<<"ingredient already present"<<endl
     }

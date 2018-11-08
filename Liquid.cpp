@@ -16,7 +16,7 @@ Liquid::Liquid(string tempType, float tempAmount, int tempPumpID){
 string Liquid::getType(){
     return type;
 }
-Liquid::setPumpID(int tempPumpID){
+void Liquid::setPumpID(int tempPumpID){
     pumpID = tempPumpID;
 }
 
@@ -28,14 +28,14 @@ float Liquid::getAmount(){
     return amount;
 }
 
-Liquid::setType(string s){
+void Liquid::setType(string s){
     type = s;
 }
 
-Liquid::setAmouont(float t){
+void Liquid::setAmouont(float t){
     amount = t;
 }
 
-Liquid::pour(string drinkType){
+void Liquid::pour(string drinkType){
     cout<< "pouring drink" << drinkType << endl;
 }
