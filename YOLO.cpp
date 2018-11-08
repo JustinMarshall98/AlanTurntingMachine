@@ -12,7 +12,7 @@ using namespace std;
 /*
 constructor to initialize the possible drinks th user could recieve and the ammount of possible drinks
 */
-YOLO::YOLO(std::vector<Drink> drinks){
+YOLO::YOLO(vector<Drink> drinks){
 
     possibleDrinks = drinks;
     numDrinks = possibleDrinks.size();

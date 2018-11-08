@@ -17,5 +17,6 @@ class SYS{
         Drink goodDrink;
         Drink badDrink;
     public:
+        SYS(std::vector<Drink> drinks);
         void ShootYourShot();
 };

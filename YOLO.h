@@ -17,5 +17,6 @@ class YOLO{
         std::vector<Drink> possibleDrinks;
         int numDrinks;
     public:
+        YOLO(std::vector<Drink> drinks);
         void randomDrink();
 };

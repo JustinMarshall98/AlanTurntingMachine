@@ -1,6 +1,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include "Drink.h"
+#include "Liquid.h"
+
 using namespace std;
 
 class DrinkFactory {
