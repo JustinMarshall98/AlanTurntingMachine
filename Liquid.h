@@ -11,13 +11,13 @@ class Liquid{
 public:
     Liquid();
     Liquid(std::string tempType, float tempAmount, int tempPumpID);
-    setPumpID(int tempPumpID);
+    void setPumpID(int tempPumpID);
     int getPumpID();
     float getAmount();
     std::string getType();
-    setType(std::string s);
-    setAmount(float t);
-    pour(std::string drinkType);
+    void setType(std::string s);
+    void setAmount(float t);
+    void pour(std::string drinkType);
 
 private:
     float amount;

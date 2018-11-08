@@ -16,11 +16,11 @@ vector<string> getLiquids(){
     return ingredients;
 }
 
-Drink::Pour(){
+void Drink::Pour(){
     Liquid::Pour(name);
 }
 
-Drink::add(string ingredient){
+void Drink::add(string ingredient){
     
     isPresent = (find(ingredients.begin(), ingredients.end(), ingredient) != ingredients.end());
     if(isPresent){
