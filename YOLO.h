@@ -3,8 +3,11 @@ Ben Macgillivray
 
 Headder file for the yolo class to pour a random drink from the menue
 
+cd Documents/CS-3307/Group_Project/group28
+
 Nov 7 2018
 */
+
 #include <iostream>
 #include <string>
 #include <stdlib.h>
