@@ -16,15 +16,20 @@ vector<string> getLiquids(){
     return ingredients;
 }
 
-Drink::Pour(){
-    Liquid::Pour(name);
+void Drink::Pour(){
+    cout << "Pouring Drink: " << name << endl;
+    cout << "With Ingredients: "  << name << endl;
+    for(int i = 0; i < ingredients.size(); i++){
+        ingredients[i].Pour();
+    }
 }
 
-Drink::add(string ingredient){
+void Drink::add(string ingredient){
     
     isPresent = (find(ingredients.begin(), ingredients.end(), ingredient) != ingredients.end());
     if(isPresent){
-        cout<<"ingredient already present"<<endl
+        cout<<"ingredient already present"<<endl;
     }
     ingredients.push_back(ingredient);
+    
 }

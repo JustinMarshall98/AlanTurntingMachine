@@ -36,6 +36,7 @@ void Liquid::setAmouont(float t){
     amount = t;
 }
 
-void Liquid::pour(string drinkType){
-    cout<< "pouring drink" << drinkType << endl;
+void Liquid::pour(){
+    cout<< "pouring Liquid: " << d.getName() << endl;
+    
 }
