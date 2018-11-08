@@ -14,7 +14,7 @@ Class for drink type
 class Drink{
 public:
     Drink(std::string d, vector<std::string> tempIngredients);
-    pour(std::string dType);
+    pour();
     add(std::string ingredient);
     vector<std::string> getLiquids();
     std::string getName();

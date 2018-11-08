@@ -7,14 +7,15 @@ Nov 7 2018
 */
 
 #include "YOLO.h"
+using namespace std;
 
 /*
 constructor to initialize the possible drinks th user could recieve and the ammount of possible drinks
 */
-YOLO::YOLO(vector<Drink> drinks){
+YOLO::YOLO(std::vector<Drink> drinks){
 
     possibleDrinks = drinks;
-    numdrinks = possibleDrinks.size();
+    numDrinks = possibleDrinks.size();
 
 }
 
@@ -25,7 +26,7 @@ returns a drink IRL
 */
 void YOLO::randomDrink(){
 
-    drinkchoice = rand() % numdrinks + 1;
+    int drinkchoice = rand() % numDrinks + 1;
     Drink randomDrink = possibleDrinks[drinkchoice];
     randomDrink.pour();
 

@@ -24,21 +24,20 @@ SYS::SYS(vector<Drink> drinks){
         }
     }
 
-}
+};
 
 /*
 class to select and pour a random drink 
 returns nothing 
 returns a drink IRL
 */
-void YOLO::randomDrink(){
 
-    drinkchoice = rand() % 6 + 1;
+YOLO::randomDrink(){
+
+    int drinkchoice = rand() % 6 + 1;
     if(drinkchoice == 6){
-        randomDrink = badDrink;
+        badDrink.pour();
     }else{
-        randomDrink = goodDrink;
+        goodDrink.pour();
     }
-    randomDrink.pour();
-    
 }
