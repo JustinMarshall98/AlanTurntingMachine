@@ -11,19 +11,9 @@ using namespace std;
 /*
 constructor to initialize the possible drinks th user could recieve and the ammount of possible drinks
 */
-SYS::SYS(vector<Drink> drinks){
-
-    int numdrinks = drinks.size();
-    
-    for(int i = 0; i < numdrinks; i++){
-        if(drinks[i].getName() == "vodka"){
-            badDrink = drinks[i];
-        }
-        else if(drinks[i].getName() == "water"){
-            goodDrink = drinks[i];
-        }
-    }
-
+SYS::SYS(vector<Drink> possibleDrinks){
+    badDrink = possibleDrinks[0];
+    goodDrink = possibleDrinks[1];
 }
 
 /*
@@ -32,12 +22,13 @@ returns nothing
 returns a drink IRL
 */
 
-void SYS::randomDrink(){
+void SYS::ShootYourShot(){
 
     int drinkchoice = rand() % 6 + 1;
     if(drinkchoice == 6){
         badDrink.pour();
-    }else{
+    }
+    else{
         goodDrink.pour();
     }
 }

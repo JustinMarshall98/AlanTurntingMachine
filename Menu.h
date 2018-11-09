@@ -2,18 +2,21 @@
 #define MENU_H
 
 #include <vector>
+#include "DrinkFactory.cpp"
+#include "pump.h"
+#include "SYS.h"
+#include "YOLO.h"
 
 class Menu {
 public:
 	Menu(DrinkFactory);
 	~Menu();
-    void pourDrink();
+    void pourDrink(int choice);
     std::vector<Drink> getDrinks();
     void clean();
-    void setDrinkChoice(int);
 private:
     std::vector<Drink> drinkOptions;
-    std::Drink drinkChoice;
+    Drink drinkChoice;
 };
 
 #endif //ifndef MENU

@@ -1,10 +1,6 @@
 //#include "UserInterface.h"
-#include "Menu.cpp"
-#include "DrinkFactory.cpp"
-#include "SYS.cpp"
-#include "YOLO.cpp"
-#include "Drink.cpp"
-//#include "Liquid.cpp"
+#include "Menu.h"
+
 #include <vector>
 #include <unistd.h>
 #include <iostream>
@@ -12,32 +8,34 @@
 using namespace std;
 
 void runMenu(DrinkFactory factory){
-    Menu temp = new Menu(factory);
+    //cout<<"SUPBITCH"<<endl;
+    Menu tempMenu(factory);
     bool loop = true;
     while(loop){
-        char option;
+        int option;
         cout << "Drink Options:" << endl;
         int i = 0;
-        vector<Drink> drinks = temp.getDrinks();
+        //cout << "xxx" << endl;
+        vector<Drink> drinks = tempMenu.getDrinks();
+        //cout << "xxx" << endl;
         for(; i < drinks.size(); i++){
             cout << "(" << i + 1 << ") " << drinks[i].getName() << endl;
         }
         cout << "(" << i + 1 << ") " << "Exit" << endl << "Input a number: ";
         cin >> option;
         cout << endl;
-        if(option = i){
+        if(option == i){
             loop = false;
         }
         else{
             option -= 1;
-            temp.setDrinkChoice(i);
-            temp.pourDrink();
+            //cout << option << endl;
+            tempMenu.pourDrink(option);
         }
     }
 }
 
 void runGames(DrinkFactory factory){
-    //GamesOptions temp = new GamesOptions(factory);
     bool loop = true;
     while(loop){
         char option;
@@ -46,11 +44,11 @@ void runGames(DrinkFactory factory){
         cout << endl;
         switch (option) {
         case '1': { 
-            SYS temp = new SYS(factory.getDrinks());
-            temp.randomDrink();
+            SYS temp(factory.getDrinks());
+            temp.ShootYourShot();
             break; }
         case '2': { 
-            YOLO temp = new YOLO(factory.getDrinks());
+            YOLO temp(factory.getDrinks());
             temp.randomDrink();
             break; }
         case '3': { 
@@ -58,11 +56,11 @@ void runGames(DrinkFactory factory){
             break; }
         }
 	}
-    delete temp;
+   // delete temp;
 }
 
 int main(){
-    DrinkFactory factory =  new DrinkFactory();
+    DrinkFactory factory("DrinkFile.txt");
     //Basic text interface implemented for testing purposes
     //GUI to be implemented later on in development
     bool loop = true;
@@ -77,11 +75,11 @@ int main(){
                 break; 
             }
             case '2': {
-                runGames();
+                runGames(factory);
                 break;
             }
             case '3': {
-                exit();
+                cout << "Exiting!";
                 loop = false;
                 break; 
             }
@@ -89,6 +87,4 @@ int main(){
     }
 }
 
-void exit(){
-    cout << "Exiting!";
-}
+

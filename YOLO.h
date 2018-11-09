@@ -7,6 +7,8 @@ cd Documents/CS-3307/Group_Project/group28
 
 Nov 7 2018
 */
+#ifndef YOLO_H
+#define YOLO_H
 
 #include <iostream>
 #include <string>
@@ -16,10 +18,12 @@ Nov 7 2018
 #include "Drink.h"
 
 class YOLO{
-    private:
-        std::vector<Drink> possibleDrinks;
-        int numDrinks;
-    public:
-        YOLO(std::vector<Drink> drinks);
-        void randomDrink();
+private:
+    std::vector<Drink> possibleDrinks;
+    int numDrinks;
+public:
+    YOLO(std::vector<Drink> drinks);
+    void randomDrink();
 };
+
+#endif

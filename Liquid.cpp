@@ -7,6 +7,7 @@ using namespace std;
 Liquid::Liquid(){
     type = "";
     amount = 0;
+    pumpID = 0;
 }
 Liquid::Liquid(string tempType, float tempAmount, int tempPumpID){
     type = tempType;
@@ -20,7 +21,7 @@ void Liquid::setPumpID(int tempPumpID){
     pumpID = tempPumpID;
 }
 
-int getPumpID(){
+int Liquid::getPumpID(){
     return pumpID;
 }
 
@@ -32,11 +33,11 @@ void Liquid::setType(string s){
     type = s;
 }
 
-void Liquid::setAmouont(float t){
+void Liquid::setAmount(float t){
     amount = t;
 }
 
 void Liquid::pour(){
-    cout<< "pouring Liquid: " << d.getName() << endl;
+    cout << type << endl;
     
 }

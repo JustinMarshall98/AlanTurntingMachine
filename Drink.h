@@ -9,17 +9,19 @@ Class for drink type
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
+#include "Liquid.h"
+#include <vector>
 
 class Drink{
 public:
-    Drink(std::string d, vector<Liquid> tempIngredients);
+    Drink(std::string d, std::vector<Liquid> tempIngredients);
+    Drink();
     void pour();
-    void add(std::string ingredient);
-    vector<Liquid> getLiquids();
+    std::vector<Liquid> getLiquids();
     std::string getName();
 
 private:
-    vector<Liquid> ingredients;
+    std::vector<Liquid> ingredients;
     std::string name;
     bool isPresent;
 };
