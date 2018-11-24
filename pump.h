@@ -1,6 +1,8 @@
 #ifndef PUMP_HPP
 #define PUMP_HPP
 
+#include "GPIOpin.h"
+#include <unistd.h>
 #include <iostream>
 
 class pump {
