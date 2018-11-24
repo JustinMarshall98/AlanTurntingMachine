@@ -11,7 +11,7 @@
 class DrinkFactory{
 public:
     DrinkFactory(std::string);
-    std::vector<drink> getDrinks();
+    std::vector<Drink> getDrinks();
     std::vector<Liquid> getLiquid();
     std::vector<std::string> split(std::string, std::string);
     Liquid findLiquid(std::string);
