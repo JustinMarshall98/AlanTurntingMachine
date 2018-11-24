@@ -19,6 +19,29 @@ pump::pump(int ID /**< [in] id of the current pump. */) {
 void pump::runPump(int pumpID /**< [in] ID of the pump to run. */, float amount/**< [in] Amount of time for the pump to run.*/) {
     // Temporary print statement until we figure out actual peripheral commands
     cout << "This is pipe: " << pumpID << " running for: " << amount << " seconds." << endl;
+
+    string pump = to_string(pumpID);
+    GPIOpin pin(pump);
+
+    //exporting the pin(setting it up)
+    pin.export_gpio();
+
+    //setting the pin to output the power(to the pump)
+    pin.setdir_gpio("out");
+
+    //sending output to the pump from the GPIO pin (pump on)
+    pin.setval_gpio("1");
+
+    //leave the pump runnig for a given amount of time(in MICROseconds)
+    usleep(amount);
+
+    //stopping the outpup to the pump (pump off)
+    pin.setval_gpio("0");
+
+    //unexporting the pin (un setting it up??)
+    pin.unexport_gpio();
+
+
 }
 
 /**
