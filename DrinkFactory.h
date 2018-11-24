@@ -13,12 +13,12 @@ public:
     DrinkFactory(std::string);
     std::vector<drink> getDrinks();
     std::vector<Liquid> getLiquid();
-    std::vector<std::string> split(string, string);
-    Liquid findLiquid(string);
+    std::vector<std::string> split(std::string, std::string);
+    Liquid findLiquid(std::string);
     
 private:
-    vector<Drink> drinks; ///< array to hold the drink recipes created and returned by the factory
-	vector<Liquid> liquids; ///< array to hold the liquids created and returned by the factory
-	string DrinkFileName; ///< file name to read the drink recipes
+    std::vector<Drink> drinks; ///< array to hold the drink recipes created and returned by the factory
+	std::vector<Liquid> liquids; ///< array to hold the liquids created and returned by the factory
+	std::string DrinkFileName; ///< file name to read the drink recipes
 };
 #endif
