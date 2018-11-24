@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void runMenu(DrinkFactory factory){
+void UserInterface::runMenu(DrinkFactory factory){
     //cout<<"SUPBITCH"<<endl;
     Menu tempMenu(factory);
     bool loop = true;
@@ -30,7 +30,7 @@ void runMenu(DrinkFactory factory){
     }
 }
 
-void runGames(DrinkFactory factory){
+void UserInterface::runGames(DrinkFactory factory){
     bool loop = true;
     while(loop){
         char option;
@@ -54,7 +54,7 @@ void runGames(DrinkFactory factory){
    // delete temp;
 }
 
-int main(){
+int UserInterface::main(){
     DrinkFactory factory("DrinkFile.txt");
     //Basic text interface implemented for testing purposes
     //GUI to be implemented later on in development

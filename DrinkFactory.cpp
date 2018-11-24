@@ -2,12 +2,12 @@
 
 using namespace std;
 
-DrinkFactory(string file)
+DrinkFactory::DrinkFactory(string filename)
 {
-	DrinkFileName = file; // file to read the drink recipe
+	DrinkFileName = filename; // file to read the drink recipe
 }
 
-vector<Drink> getDrinks()
+vector<Drink> DrinkFactory::getDrinks()
 {
 	string drinkLine;			   // line from the drink file
 	ifstream DrinkFile;			   // file to read from
@@ -39,7 +39,7 @@ vector<Drink> getDrinks()
 	return drinks;
 }
 
-vector<Liquid> getLiquid()
+vector<Liquid> DrinkFactory::getLiquid()
 {
 	string liquidLine;				   // holds line from file
 	ifstream LiquidFile;			   // file to read from
@@ -72,7 +72,7 @@ vector<Liquid> getLiquid()
 	return liquids;
 }
 
-vector<string> split(string line, string del)
+vector<string> DrinkFactory::split(string line, string del)
 {
 	vector<string> list;						   // vector to hold elements from line
 	size_t pos = 0;								   // position in line
@@ -86,7 +86,7 @@ vector<string> split(string line, string del)
 	return list;
 }
 
-Liquid findLiquid(string id)
+Liquid DrinkFactory::findLiquid(string id)
 {
 	for (int j = 0; j < liquids.size(); j++) // loops through liquids
 	{
