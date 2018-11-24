@@ -6,11 +6,11 @@
  * Purpose: Each object instantiated from this class will control a GPIO pin
  * The GPIO pin number must be passed to the overloaded class constructor
  */
-class GPIOClass
+class GPIOpin
 {
 public:
-    GPIOClass();  // create a GPIO object that controls GPIO4 (default
-    GPIOClass(std::string x); // create a GPIO object that controls GPIOx, where x is passed to this constructor
+    GPIOpin();  // create a GPIO object that controls GPIO4 (default
+    GPIOpin(std::string x); // create a GPIO object that controls GPIOx, where x is passed to this constructor
     int export_gpio(); // exports GPIO
     int unexport_gpio(); // unexport GPIO
     int setdir_gpio(std::string dir); // Set GPIO Direction

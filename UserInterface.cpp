@@ -3,7 +3,6 @@
 using namespace std;
 
 void UserInterface::runMenu(DrinkFactory factory){
-    //cout<<"SUPBITCH"<<endl;
     Menu tempMenu(factory);
     bool loop = true;
     while(loop){
