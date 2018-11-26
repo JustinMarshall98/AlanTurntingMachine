@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
+#include "pump.h"
 
 //Add more includes ? 
 

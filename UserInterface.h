@@ -10,6 +10,7 @@
 
 class UserInterface{
 public:
+    UserInterface();
     void runMenu(DrinkFactory);
     void runGames(DrinkFactory);
     int main();

@@ -21,4 +21,5 @@ private:
 	std::vector<Liquid> liquids; ///< array to hold the liquids created and returned by the factory
 	std::string DrinkFileName; ///< file name to read the drink recipes
 };
+
 #endif

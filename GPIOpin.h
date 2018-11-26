@@ -2,10 +2,11 @@
 #define GPIO_CLASS_H
 
 #include <string>
-/* GPIO Class
- * Purpose: Each object instantiated from this class will control a GPIO pin
- * The GPIO pin number must be passed to the overloaded class constructor
- */
+#include <fstream>
+#include <string>
+#include <iostream>
+#include <sstream>
+
 class GPIOpin
 {
 public:

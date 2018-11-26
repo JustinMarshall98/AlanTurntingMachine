@@ -2,6 +2,10 @@
 
 using namespace std;
 
+UserInterface::UserInterface(){
+
+}
+
 void UserInterface::runMenu(DrinkFactory factory){
     Menu tempMenu(factory);
     bool loop = true;
@@ -53,8 +57,9 @@ void UserInterface::runGames(DrinkFactory factory){
    // delete temp;
 }
 
-int UserInterface::main(){
+int main(){
     DrinkFactory factory("DrinkFile.txt");
+    UserInterface interface = UserInterface();
     //Basic text interface implemented for testing purposes
     //GUI to be implemented later on in development
     bool loop = true;
@@ -65,11 +70,11 @@ int UserInterface::main(){
         cout << endl;
         switch (option) {
             case '1': { 
-                runMenu(factory);
+                interface.runMenu(factory);
                 break; 
             }
             case '2': {
-                runGames(factory);
+                interface.runGames(factory);
                 break;
             }
             case '3': {

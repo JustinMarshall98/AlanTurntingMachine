@@ -19,9 +19,9 @@ vector<Liquid> Drink::getLiquids(){
 }
 
 void Drink::pour(){
-    cout << "Drink Name: " <<  name << endl;
-    cout << "Pouring Drink Ingredients: " << endl;
+    cout << "pouring drink(in Drink)" << endl;
+    
     for(int i = 0; i < ingredients.size(); i++){
-        cout << ingredients[i].getType() << endl;
+        ingredients[i].pour();
     }
 }

@@ -38,6 +38,7 @@ void Liquid::setAmount(float t){
 }
 
 void Liquid::pour(){
-    cout << type << endl;
-    
+    cout << "Pouring: " << type << endl;
+    pump thispump = pump(pumpID);
+    thispump.runPump(pumpID, amount);
 }

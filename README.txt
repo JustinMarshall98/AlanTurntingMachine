@@ -21,7 +21,7 @@ cd /media/sf_3307VMshared/CS-3307/Group_Project/group28
 
 Run this, and enjoy! 
 
-g++ Liquid.cpp Drink.cpp DrinkFactory.cpp Menu.cpp Pump.cpp SYS.cpp YOLO.cpp UserInterface.cpp
+g++ Liquid.cpp Drink.cpp DrinkFactory.cpp Menu.cpp Pump.cpp GPIOpin.cpp SYS.cpp YOLO.cpp UserInterface.cpp
 
 To run ./a.out 
 
