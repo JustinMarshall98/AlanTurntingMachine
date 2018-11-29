@@ -1,7 +1,7 @@
 /**
  * @file SYS.cpp
  * @author Ben
- * @brief 
+ * @brief Class representing the Shoot Your Shot game.
  * @version 0.1
  * @date 2018-11-28
  * 

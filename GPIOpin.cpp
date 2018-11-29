@@ -1,7 +1,7 @@
 /**
  * @file GPIOpin.cpp
- * @author
- * @brief 
+ * @author Ben
+ * @brief Class representing a pin on the Raspberry Pi controller.
  * @version 0.1
  * @date 2018-11-28
  * 

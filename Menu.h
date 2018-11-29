@@ -1,6 +1,6 @@
 /**
  * @file Menu.h
- * @author 
+ * @author Justin
  * @brief Header file for the Menu class.
  * @version 0.1
  * @date 2018-11-28

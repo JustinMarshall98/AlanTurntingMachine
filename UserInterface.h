@@ -1,6 +1,6 @@
 /**
  * @file UserInterface.h
- * @author 
+ * @author Justin, Connor
  * @brief Header for User Interface class.
  * @version 0.1
  * @date 2018-11-28

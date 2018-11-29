@@ -1,6 +1,6 @@
 /**
  * @file UserInterface.cpp
- * @author 
+ * @author Justin
  * @brief Class representing the UI for the program.
  * @version 0.1
  * @date 2018-11-28

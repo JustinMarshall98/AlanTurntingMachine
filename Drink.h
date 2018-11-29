@@ -1,3 +1,13 @@
+/**
+ * @file Drink.h
+ * @author Jodi
+ * @brief Header file for the Drink class.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 /*Jboone6 for group 28
 CS 3307 Group project
 Class for drink type

@@ -1,6 +1,6 @@
 /**
  * @file Menu.cpp
- * @author 
+ * @author Justin
  * @brief Class representing the menu to select options of the program from.
  * @version 0.1
  * @date 2018-11-28

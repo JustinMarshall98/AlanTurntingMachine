@@ -1,6 +1,6 @@
 /**
  * @file DrinkFactory.h
- * @author 
+ * @author Shawn, Connor
  * @brief Header file for the Drink Factory class.
  * @version 0.1
  * @date 2018-11-28
@@ -18,7 +18,7 @@
 #include <vector>
 #include <string>
 
-class DrinkFactory{
+class DrinkFactory {
 public:
     DrinkFactory(std::string);
     std::vector<Drink> getDrinks();

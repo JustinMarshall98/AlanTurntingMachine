@@ -1,3 +1,13 @@
+/**
+ * @file Drink.cpp
+ * @author Jodi
+ * @brief Class representing a drink, which is an object containing multiple liquids.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #include "Drink.h"
 
 using namespace std;

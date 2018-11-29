@@ -1,6 +1,6 @@
 /**
  * @file GPIOpin.h
- * @author 
+ * @author Ben
  * @brief Header file for the class representing a GPIO pin.
  * @version 0.1
  * @date 2018-11-28
