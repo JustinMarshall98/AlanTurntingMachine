@@ -49,8 +49,11 @@ void pump::runPump(int pumpID /**< [in] ID of the pump to run. */, float amount/
         if(pin.unexport_gpio()){
             cout << "unexport success" << endl;
         }
-
+    }else{
+        cout << "export not returning properly" << endl;
     }
+
+
 
     //setting the pin to output the power(to the pump)
     
