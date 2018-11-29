@@ -36,31 +36,36 @@ void pump::runPump(int pumpID /**< [in] ID of the pump to run. */, float amount/
     //exporting the pin(setting it up)
     if(pin.export_gpio()){
         cout << "export success" << endl;
+        if(pin.setdir_gpio("out")){
+            cout << "direction set" << endl;
+            if(pin.setval_gpio("1")){
+                cout << "pin on" << endl;
+                sleep(amount/100);
+                if(pin.setval_gpio("0")){
+                    cout << "pin off" << endl;
+                }
+            }
+        }
+        if(pin.unexport_gpio()){
+            cout << "unexport success" << endl;
+        }
+
     }
 
     //setting the pin to output the power(to the pump)
-    if(pin.setdir_gpio("out")){
-        cout << "direction set" << endl;
-    }
+    
 
     //sending output to the pump from the GPIO pin (pump on)
-    if(pin.setval_gpio("1")){
-        cout << "pin on" << endl;
-    }
+    
 
     //leave the pump runnig for a given amount of time(in MILIseconds)
-    sleep(amount/100);
+    
 
     //stopping the outpup to the pump (pump off)
-    if(pin.setval_gpio("0")){
-        cout << "pin off" << endl;
-    }
+    
 
     //unexporting the pin (un setting it up??)
-    if(pin.unexport_gpio()){
-        cout << "unexport success" << endl;
-    }
-
+    
 }
 
 /**
