@@ -1,11 +1,30 @@
+/**
+ * @file UserInterface.cpp
+ * @author 
+ * @brief Class representing the UI for the program.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #include "UserInterface.h"
 
 using namespace std;
 
+/**
+ * @brief Construct a new User Interface when no parameters are passed.
+ * 
+ */
 UserInterface::UserInterface(){
 
 }
 
+/**
+ * @brief Construct a new User Interface with the passed Drink Factory to populate all the possible options.
+ * 
+ * @param factory 
+ */
 void UserInterface::runMenu(DrinkFactory factory){
     Menu tempMenu(factory);
     bool loop = true;
@@ -33,6 +52,11 @@ void UserInterface::runMenu(DrinkFactory factory){
     }
 }
 
+/**
+ * @brief Method for running the programmed games on the program.
+ * 
+ * @param factory Drink Factory object containing all of the created games.
+ */
 void UserInterface::runGames(DrinkFactory factory){
     bool loop = true;
     while(loop){
@@ -57,6 +81,11 @@ void UserInterface::runGames(DrinkFactory factory){
    // delete temp;
 }
 
+/**
+ * @brief Main method for the program which runs and creates all required objects to run the program.
+ * 
+ * @return int 
+ */
 int main(){
     DrinkFactory factory("DrinkFile.txt");
     UserInterface interface = UserInterface();

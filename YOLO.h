@@ -1,12 +1,14 @@
-/*
-Ben Macgillivray
+/**
+ * @file YOLO.h
+ * @author Ben
+ * @brief Header file for the YOLO class.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 
-Headder file for the yolo class to pour a random drink from the menue
-
-cd Documents/CS-3307/Group_Project/group28
-
-Nov 7 2018
-*/
 #ifndef YOLO_H
 #define YOLO_H
 
@@ -19,7 +21,9 @@ Nov 7 2018
 
 class YOLO{
 private:
+    // Vector list containing all possible drinks that can be used in the game.
     std::vector<Drink> possibleDrinks;
+    // Integer value selecting the number of drinks to be made.
     int numDrinks;
 public:
     YOLO(std::vector<Drink> drinks);

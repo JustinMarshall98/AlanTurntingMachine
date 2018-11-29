@@ -1,17 +1,22 @@
-/*
-Ben Macgillivray
-
-Implementation for the YOLO class
-
-Nov 7 2018
-*/
+/**
+ * @file YOLO.cpp
+ * @author Ben
+ * @brief Class representing the YOLO game for randomizing drinks.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 
 #include "YOLO.h"
 using namespace std;
 
-/*
-constructor to initialize the possible drinks th user could recieve and the ammount of possible drinks
-*/
+/**
+ * @brief Construct a new YOLO object and populates it with all possible drinks, and amounts of drinks.
+ * 
+ * @param drinks 
+ */
 YOLO::YOLO(vector<Drink> drinks){
 
     possibleDrinks = drinks;
@@ -19,11 +24,10 @@ YOLO::YOLO(vector<Drink> drinks){
 
 }
 
-/*
-class to select and pour a random drink 
-returns nothing 
-returns a drink IRL
-*/
+/**
+ * @brief Method that selects and pours a random drinks.
+ * 
+ */
 void YOLO::randomDrink(){
 
     int drinkchoice = rand() % numDrinks + 1;
