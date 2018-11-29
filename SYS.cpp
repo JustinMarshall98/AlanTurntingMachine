@@ -12,8 +12,8 @@ using namespace std;
 constructor to initialize the possible drinks th user could recieve and the ammount of possible drinks
 */
 SYS::SYS(vector<Drink> possibleDrinks){
-    badDrink = possibleDrinks[0];
-    goodDrink = possibleDrinks[1];
+    badDrink = possibleDrinks[8];
+    goodDrink = possibleDrinks[9];
 }
 
 /*
