@@ -1,3 +1,13 @@
+/**
+ * @file pump.cpp
+ * @author Connor, Ben
+ * @brief File representing a pump object to pour drinks.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #include "pump.h"
 using namespace std;
 

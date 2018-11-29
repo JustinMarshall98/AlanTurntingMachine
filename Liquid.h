@@ -1,3 +1,13 @@
+/**
+ * @file Liquid.h
+ * @author Jodi
+ * @brief Header file for the Liquid class.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #ifndef LIQUID_H
 #define LIQUID_H
 
@@ -21,8 +31,11 @@ public:
     void pour();
 
 private:
+    // Amount of liquid to be poured into a drink.
     float amount;
+    // Name type of liquid.
     std::string type;
+    // ID of pump associated with liquid.
     int pumpID;
 
 };

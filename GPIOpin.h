@@ -1,3 +1,13 @@
+/**
+ * @file GPIOpin.h
+ * @author 
+ * @brief Header file for the class representing a GPIO pin.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #ifndef GPIO_CLASS_H
 #define GPIO_CLASS_H
 

@@ -1,19 +1,41 @@
+/**
+ * @file GPIOpin.cpp
+ * @author
+ * @brief 
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #include "GPIOpin.h"
-
 
 using namespace std;
 
+/**
+ * @brief Construct a new GPIOpin object representing a pin on the Raspberry Pi with a default pin number.
+ * 
+ */
 GPIOpin::GPIOpin()
 {
     this->gpionum = "4"; //GPIO4 is default
 }
 
+/**
+ * @brief Construct a new GPIOpin object representing a pin on the Raspberry Pi with a specified pin number.
+ * 
+ * @param gnum String representation of the pin number to create the GPIOpin object with.
+ */
 GPIOpin::GPIOpin(string gnum) //input is the pin you wish to modify
 {
     this->gpionum = gnum;  //Instatiate GPIOClass object for GPIO pin number "gnum"
 }
 
-// allows access to the gpio pin 
+/**
+ * @brief Method that allows access to the GPIO pin on the Raspberry Pi.
+ * 
+ * @return int Integer representation of the pin number to access.
+ */
 int GPIOpin::export_gpio()
 {
     string export_str = "/sys/class/gpio/export";
@@ -28,7 +50,11 @@ int GPIOpin::export_gpio()
     return 0;
 }
 
-//dissalows access to that gpio pon 
+/**
+ * @brief Method that disallows access to the GPIO pin on the Raspberry Pi.
+ * 
+ * @return int Integer representation of the pin number to deaccess.
+ */
 int GPIOpin::unexport_gpio()
 {
     string unexport_str = "/sys/class/gpio/unexport";
@@ -43,7 +69,12 @@ int GPIOpin::unexport_gpio()
     return 0;
 }
 
-//sets the direction of the GPIO pin(showld always be "out" for our purposes)
+/**
+ * @brief Method which sets the direction of the GPIO pin (in or out) always set to out for this project.
+ * 
+ * @param dir String representation of the direction to set the GPIO pin to.
+ * @return int Integer value showing whether the direction was changed. (-1 for failed, 0 for success)
+ */
 int GPIOpin::setdir_gpio(string dir) //can only be "out" or "in"
 {
 
@@ -59,6 +90,12 @@ int GPIOpin::setdir_gpio(string dir) //can only be "out" or "in"
         return 0;
 }
 
+/**
+ * @brief Method which sets the value of the GPIO pin.
+ * 
+ * @param val String representation of the value to set the value of the pin equal to.
+ * @return int Integer value showing whether the direction was changed. (-1 for failed, 0 for success)
+ */
 int GPIOpin::setval_gpio(string val)
 {
 
@@ -74,7 +111,12 @@ int GPIOpin::setval_gpio(string val)
         return 0;
 }
 
-//val is passed by value and when this funciton is run on a string it retrieves the gpio value and stores it in tthe input string
+/**
+ * @brief Method which retrieves and returns the value of the current GPIO pin.
+ * 
+ * @param val Value to store the value of the GPIO pin into.
+ * @return int Integer value showing whether the direction was changed. (-1 for failed, 0 for success)
+ */
 int GPIOpin::getval_gpio(string& val){
 
     string getval_str = "/sys/class/gpio/gpio" + this->gpionum + "/value";
@@ -95,6 +137,11 @@ int GPIOpin::getval_gpio(string& val){
     return 0;
 }
 
+/**
+ * @brief Method which retrieves and returns the number of the current GPIO pin.
+ * 
+ * @return string String representation of the number of the current GPIO pin.
+ */
 string GPIOpin::get_gpionum(){
 
 return this->gpionum;

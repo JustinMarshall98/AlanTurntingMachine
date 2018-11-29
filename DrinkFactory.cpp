@@ -1,12 +1,32 @@
+/**
+ * @file DrinkFactory.cpp
+ * @author 
+ * @brief Class the contains the factory for creating drinks from a file.
+ * @version 0.1
+ * @date 2018-11-28
+ * 
+ * @copyright Copyright (c) 2018
+ * 
+ */
 #include "DrinkFactory.h"
 
 using namespace std;
 
+/**
+ * @brief Construct a new Drink Factory object.
+ * 
+ * @param filename Contains a string representation of the name of the file containing a list of drinks.
+ */
 DrinkFactory::DrinkFactory(string filename)
 {
 	DrinkFileName = filename; // file to read the drink recipe
 }
 
+/**
+ * @brief Method which reads through the provided and creates all of the drinks in the file.
+ * 
+ * @return vector<Drink> Vector representation of a list of drinks contained in the file.
+ */
 vector<Drink> DrinkFactory::getDrinks()
 {
 	string drinkLine;			   // line from the drink file
@@ -39,6 +59,11 @@ vector<Drink> DrinkFactory::getDrinks()
 	return drinks;
 }
 
+/**
+ * @brief Method that goes through the file containing a list of liquids, creating Liquid objects for each.
+ * 
+ * @return vector<Liquid> Returns a vector representation of a list containing all of the liquids contained in the file.
+ */
 vector<Liquid> DrinkFactory::getLiquid()
 {
 	string liquidLine;				   // holds line from file
@@ -72,6 +97,13 @@ vector<Liquid> DrinkFactory::getLiquid()
 	return liquids;
 }
 
+/**
+ * @brief Method for splitting a line in a text file.
+ * 
+ * @param line A string representation of a line that we want to split.
+ * @param del A string representation of the delimiter to split at.
+ * @return vector<string> A vector representation of a list containing the list of drinks or liquids in a file.
+ */
 vector<string> DrinkFactory::split(string line, string del)
 {
 	vector<string> list;						   // vector to hold elements from line
@@ -86,6 +118,12 @@ vector<string> DrinkFactory::split(string line, string del)
 	return list;
 }
 
+/**
+ * @brief A method for going through the list of liquids, and finding the Liquid class based on an ID.
+ * 
+ * @param id A string representation of the ID representing a Liquid object.
+ * @return Liquid Returns a Liquid object found using its ID.
+ */
 Liquid DrinkFactory::findLiquid(string id)
 {
 	for (int j = 0; j < liquids.size(); j++) // loops through liquids

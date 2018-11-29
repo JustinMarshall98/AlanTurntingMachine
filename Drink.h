@@ -12,6 +12,11 @@ Class for drink type
 #include "Liquid.h"
 #include <vector>
 
+/**
+ * @brief The drink method represents a drink, containing multiple liquids represented
+ * in the liquid class.
+ * 
+ */
 class Drink{
 public:
     Drink(std::string d, std::vector<Liquid> tempIngredients);
@@ -21,8 +26,11 @@ public:
     std::string getName();
 
 private:
+    // Ingredients holds a vector list of ingredients contained in the current drink.
     std::vector<Liquid> ingredients;
+    // Name holds a string name of the current drink object.
     std::string name;
+    // 
     bool isPresent;
 };
 
