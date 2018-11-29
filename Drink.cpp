@@ -40,13 +40,13 @@ vector<Liquid> Drink::getLiquids(){
 }
 
 /**
- * @brief Method that mimics the act of pouring a drink.
+ * @brief Method that pours the drink.
  * 
  */
 void Drink::pour(){
     cout << "pouring drink(in Drink)" << endl;
     
-    for(int i = 0; i < ingredients.size(); i++){
-        ingredients[i].pour();
+    for(int i = 0; i < ingredients.size(); i++){ ///< Loop through list of ingredients
+        ingredients[i].pour(); ///< Call the pour method on each ingredient
     }
 }
