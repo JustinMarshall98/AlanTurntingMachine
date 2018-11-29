@@ -53,7 +53,7 @@ int GPIOpin::export_gpio()
 /**
  * @brief Method that disallows access to the GPIO pin on the Raspberry Pi.
  * 
- * @return int Integer representation of the pin number to deaccess.
+ * @return int equivalent of a success or failure value.
  */
 int GPIOpin::unexport_gpio()
 {
@@ -94,7 +94,7 @@ int GPIOpin::setdir_gpio(string dir) //can only be "out" or "in"
  * @brief Method which sets the value of the GPIO pin.
  * 
  * @param val String representation of the value to set the value of the pin equal to.
- * @return int Integer value showing whether the direction was changed. (-1 for failed, 0 for success)
+ * @return int Integer value showing whether the value was changed. (-1 for failed, 0 for success)
  */
 int GPIOpin::setval_gpio(string val)
 {
