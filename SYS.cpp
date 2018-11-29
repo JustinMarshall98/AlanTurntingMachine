@@ -17,8 +17,8 @@ using namespace std;
  * @param possibleDrinks Vector representation of a list of all possible drinks and amounts to be chosen from.
  */
 SYS::SYS(vector<Drink> possibleDrinks){
-    badDrink = possibleDrinks[0];
-    goodDrink = possibleDrinks[1];
+    badDrink = possibleDrinks[8];
+    goodDrink = possibleDrinks[9];
 }
 
 /**

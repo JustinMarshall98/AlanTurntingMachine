@@ -7,3 +7,5 @@ Tequila:Soda:
 Rum:Coke:
 Rum:Sprite:
 Rum:Soda:
+Vodka:Vodka:
+Soda:Soda:
