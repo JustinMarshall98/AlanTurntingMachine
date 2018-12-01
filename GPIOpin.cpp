@@ -41,14 +41,14 @@ int GPIOpin::export_gpio()
     string export_str = "/sys/class/gpio/export";
     ofstream exportgpio;
     exportgpio.open(export_str.c_str()); // Open "export" file. Convert C++ string to C string. Required for all Linux pathnames
-    if (!exportgpio.is_open()){
-        cout << " OPERATION FAILED: Unable to export GPIO"<< this->gpionum <<" ."<< endl;
-        return -1;
+    if (exportgpio.is_open()){
+        exportgpio << this->gpionum ; //write GPIO number to export
+		exportgpio.close(); //close export file
+		return 0;
     }
+    return -1;
 
-    exportgpio << this->gpionum ; //write GPIO number to export
-    exportgpio.close(); //close export file
-    return 0;
+    
 }
 
 /**
@@ -61,14 +61,15 @@ int GPIOpin::unexport_gpio()
     string unexport_str = "/sys/class/gpio/unexport";
     ofstream unexportgpio;
     unexportgpio.open(unexport_str.c_str()); //Open unexport file
-    if (!unexportgpio.is_open()){
-        cout << " OPERATION FAILED: Unable to unexport GPIO"<< this->gpionum <<" ."<< endl;
-        return -1;
+    if (unexportgpio.is_open()){
+        unexportgpio << this->gpionum ; //write GPIO number to unexport
+		unexportgpio.close(); //close unexport file
+		return 0;
     }
+    cout << " OPERATION FAILED: Unable to unexport GPIO"<< this->gpionum <<" ."<< endl;
+    return -1;
 
-    unexportgpio << this->gpionum ; //write GPIO number to unexport
-    unexportgpio.close(); //close unexport file
-    return 0;
+    
 }
 
 /**
@@ -83,14 +84,18 @@ int GPIOpin::setdir_gpio(string dir) //can only be "out" or "in"
     string setdir_str ="/sys/class/gpio/gpio" + this->gpionum + "/direction"; //creating the direction filepath using the GPIO name  
     ofstream setdirgpio; // open direction file for gpio
     setdirgpio.open(setdir_str.c_str());
-    if (!setdirgpio.is_open()){
-        cout << " OPERATION FAILED: Unable to set direction of GPIO"<< this->gpionum <<" ."<< endl;
-        return -1;
+    if (setdirgpio.is_open()){
+		
+		setdirgpio << dir; //write direction to direction file
+		setdirgpio.close(); // close direction file
+		return 0;
+		
     }
+    
+    cout << " OPERATION FAILED: Unable to set direction of GPIO"<< this->gpionum <<" ."<< endl;
+    return -1;
 
-    setdirgpio << dir; //write direction to direction file
-    setdirgpio.close(); // close direction file
-    return 0;
+    
 }
 
 /**
@@ -105,14 +110,15 @@ int GPIOpin::setval_gpio(string val)
     string setval_str = "/sys/class/gpio/gpio" + this->gpionum + "/value";
     ofstream setvalgpio; // open value file for gpio
     setvalgpio.open(setval_str.c_str());
-    if (!setvalgpio.is_open()){
-        cout << " OPERATION FAILED: Unable to set the value of GPIO"<< this->gpionum <<" ."<< endl;
-        return -1;
+    if (setvalgpio.is_open()){
+        setvalgpio << val ;//write value to value file
+		setvalgpio.close();// close value file
+		return 0;
     }
-
-    setvalgpio << val ;//write value to value file
-    setvalgpio.close();// close value file
-    return 0;
+	
+	cout << " OPERATION FAILED: Unable to set the value of GPIO"<< this->gpionum <<" ."<< endl;
+    return -1;
+    
 }
 
 /**

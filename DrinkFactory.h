@@ -13,6 +13,7 @@
 
 #include "Drink.h"
 #include "Liquid.h"
+#include "GPIOpin.h"
 
 #include <fstream>
 #include <vector>

@@ -16,7 +16,9 @@
 #include <stdio.h>
 #include "pump.h"
 
-//Add more includes ? 
+/**
+ * @brief Class representing a Liquid object.
+ */
 
 class Liquid{
 public:

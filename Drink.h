@@ -23,9 +23,7 @@ Class for drink type
 #include <vector>
 
 /**
- * @brief The drink method represents a drink, containing multiple liquids represented
- * in the liquid class.
- * 
+ * @brief Class representing a drink, which is an object containing multiple liquids.
  */
 class Drink{
 public:

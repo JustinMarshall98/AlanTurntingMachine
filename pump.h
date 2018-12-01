@@ -15,6 +15,10 @@
 #include <unistd.h>
 #include <iostream>
 
+/**
+ * @brief File representing a pump object to pour drinks.
+ */
+
 class pump {
     public:
         pump(int) ;

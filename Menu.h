@@ -17,6 +17,10 @@
 #include "SYS.h"
 #include "YOLO.h"
 
+/**
+ * @brief Class representing the menu to select options of the program from.
+ */
+
 class Menu {
 public:
 	Menu(DrinkFactory);

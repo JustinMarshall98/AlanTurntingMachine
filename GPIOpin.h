@@ -17,6 +17,10 @@
 #include <iostream>
 #include <sstream>
 
+/**
+ * @brief Class representing a pin on the Raspberry Pi controller.
+ */
+
 class GPIOpin
 {
 public:

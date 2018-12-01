@@ -38,7 +38,7 @@ void UserInterface::runMenu(DrinkFactory factory){
         for(; i < drinks.size(); i++){
             cout << "(" << i + 1 << ") " << drinks[i].getName() << endl;
         }
-        cout << "(" << i + 1 << ") " << "Exit" << endl << "Input a number: ";
+        cout << "(" << ++i << ") " << "Exit" << endl << "Input a number: ";
         cin >> option;
         cout << endl;
         if(option == i){

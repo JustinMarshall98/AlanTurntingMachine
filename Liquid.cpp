@@ -1,7 +1,7 @@
 /**
  * @file Liquid.cpp
  * @author Jodi
- * @brief Class representing an Liquid object.
+ * @brief Class representing a Liquid object.
  * @version 0.1
  * @date 2018-11-28
  * 

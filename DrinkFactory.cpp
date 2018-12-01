@@ -81,17 +81,18 @@ vector<Liquid> DrinkFactory::getLiquid()
 		type = currentL[2];
 		string tempAm = currentL[0];
 		string tempPump = currentL[1];
-		//cout << type << "fuck" << tempAm << "fuck" << tempPump << endl;
-		//currentL.pop_back();
-		//string tempAm = currentL.back(); // gets amount
-		//currentL.pop_back();
-		//string tempPump = currentL.back(); // gets pumpId
-		//currentL.pop_back();
 
-		// conversions
 		amount = strtof((tempAm).c_str(), 0);
 		pump = stoi(tempPump);
 		Liquid tempL(type, amount, pump);
+		//export the gpio pin for the given liquid
+		string pumpS = to_string(pump);
+		GPIOpin pin(pumpS);
+		
+		if(pin.export_gpio() == 0){
+			cout << "export success" << endl;
+		}
+		
 		liquids.push_back(tempL); // adds liquid
 	}
 	return liquids;

@@ -18,6 +18,10 @@
 #include <iostream>
 #include <string>
 
+/**
+ * @brief Class representing the UI for the program.
+ */
+
 class UserInterface{
 public:
     UserInterface();

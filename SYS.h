@@ -17,6 +17,10 @@
 #include "Drink.h"
 #include <vector>
 
+/**
+ * @brief Class representing the Shoot Your Shot game.
+ */
+
 class SYS{
 public:
     SYS(std::vector<Drink> drinks);

@@ -19,6 +19,10 @@
 #include <vector>
 #include "Drink.h"
 
+/**
+ * @brief Class representing the YOLO game for randomizing drinks.
+ */
+
 class YOLO{
 private:
     // Vector list containing all possible drinks that can be used in the game.
