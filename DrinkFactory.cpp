@@ -90,7 +90,11 @@ vector<Liquid> DrinkFactory::getLiquid()
 		GPIOpin pin(pumpS);
 		
 		if(pin.export_gpio() == 0){
-			cout << "export success" << endl;
+			if(pin.setdir_gpio("out")){
+				if(pin.setval_gpio("0")){
+					cout << "initialized pin " << endl;
+				}
+			}
 		}
 		
 		liquids.push_back(tempL); // adds liquid

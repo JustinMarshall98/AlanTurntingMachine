@@ -1,6 +1,6 @@
-200:17:Vodka:
-200:27:Tequila:
-200:22:Rum:
-200:23:Coke:
-200:24:Sprite:
-200:25:Soda:
+5:17:Vodka:
+5:27:Tequila:
+5:22:Rum:
+20:23:Coke:
+20:24:Sprite:
+20:25:Soda:
