@@ -87,6 +87,7 @@ vector<Liquid> DrinkFactory::getLiquid()
 		pump = stoi(tempPump);
 		Liquid tempL(type, amount, pump);
 		Liquid initialLiquid(type, 0.5, pump);
+		
 		//export the gpio pin for the given liquid
 		string pumpS = to_string(pump);
 		GPIOpin pin(pumpS);
@@ -102,10 +103,12 @@ vector<Liquid> DrinkFactory::getLiquid()
 		}
 		
 		liquids.push_back(tempL); // adds liquid
+		initializeLiquids.push_back(initialLiquid);
 	}
 
 	for(int i = 0; i < initializeLiquids.size(); i++){
 		initializeLiquids[i].pour();
+		cout << "initializing pump" << endl;
 	}
 
 	return liquids;
