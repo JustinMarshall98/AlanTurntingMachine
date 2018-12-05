@@ -40,7 +40,7 @@ void pump::runPump(int pumpID /**< [in] ID of the pump to run. */, float amount/
 		cout << "direction set" << endl;
 		if(pin.setval_gpio("1") == 0){
 			cout << "pin on" << endl;
-			sleep(amount/100);
+			sleep(amount);
 			if(pin.setval_gpio("0") == 0){
 				cout << "pin off" << endl;
 			}

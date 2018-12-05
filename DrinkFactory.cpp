@@ -69,6 +69,7 @@ vector<Liquid> DrinkFactory::getLiquid()
 	string liquidLine;				   // holds line from file
 	ifstream LiquidFile;			   // file to read from
 	LiquidFile.open("LiquidFile.txt"); // opens file
+	vector<Liquid> initializeLiquids;
 
 	while (getline(LiquidFile, liquidLine))
 	{
@@ -85,20 +86,28 @@ vector<Liquid> DrinkFactory::getLiquid()
 		amount = strtof((tempAm).c_str(), 0);
 		pump = stoi(tempPump);
 		Liquid tempL(type, amount, pump);
+		Liquid initialLiquid(type, 0.5, pump);
 		//export the gpio pin for the given liquid
 		string pumpS = to_string(pump);
 		GPIOpin pin(pumpS);
 		
 		if(pin.export_gpio() == 0){
-			if(pin.setdir_gpio("out")){
-				if(pin.setval_gpio("0")){
+			/*
+			if(pin.setdir_gpio("out") == 0){
+				if(pin.setval_gpio("0") == 0){
 					cout << "initialized pin " << endl;
 				}
 			}
+			*/
 		}
 		
 		liquids.push_back(tempL); // adds liquid
 	}
+
+	for(int i = 0; i < initializeLiquids.size(); i++){
+		initializeLiquids[i].pour();
+	}
+
 	return liquids;
 }
 
