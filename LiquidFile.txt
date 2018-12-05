@@ -4,3 +4,9 @@
 40:23:Coke:
 40:24:Sprite:
 40:25:Soda:
+0.5:17:initialV:
+0.5:27:initialT:
+0.5:22:initialR:
+0.5:23:initialC:
+0.5:24:initialSp:
+0.5:25:initialSo:

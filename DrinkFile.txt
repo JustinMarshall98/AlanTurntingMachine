@@ -9,3 +9,4 @@ Rum:Sprite:
 Rum:Soda:
 Vodka:Vodka:
 Soda:Soda:
+initialV:initialT:initialR:initialC:initialSp:initialSo:
