@@ -47,7 +47,9 @@ void UserInterface::runMenu(DrinkFactory factory){
         else{
             option -= 1;
             //cout << option << endl;
-            tempMenu.pourDrink(option);
+            if (option >= 0 && option < drinks.size()) {
+                tempMenu.pourDrink(option);
+            }
         }
     }
 }

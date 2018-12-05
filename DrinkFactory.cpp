@@ -35,7 +35,7 @@ vector<Drink> DrinkFactory::getDrinks()
 	//cout << "test" << endl;
 	vector<Liquid> listL = getLiquid(); // list to store all liquids
 	//cout << "test" << endl;
-	getline(DrinkFile, drinkLine);
+	//getline(DrinkFile, drinkLine);
 	//cout << drinkLine << endl;
 	while (getline(DrinkFile, drinkLine))
 	{
