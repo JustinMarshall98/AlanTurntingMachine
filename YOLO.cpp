@@ -20,7 +20,7 @@ using namespace std;
 YOLO::YOLO(vector<Drink> drinks){
 
     possibleDrinks = drinks;
-    numDrinks = possibleDrinks.size();
+    numDrinks = possibleDrinks.size() - 3;
 
 }
 
